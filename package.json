@@ -1,0 +1,22 @@
+{
+  "name": "memoplay",
+  "version": "1.0.0",
+  "description": "juego que emula al juego memotest",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n0g4y0/memoplay.git"
+  },
+  "author": "n0g4y0",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/n0g4y0/memoplay/issues"
+  },
+  "homepage": "https://github.com/n0g4y0/memoplay#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  }
+}
