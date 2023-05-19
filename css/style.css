@@ -16,27 +16,37 @@
 .clear {
 	clear: both;
 }
-
-/******************************************
-/* BASE STYLES
-/*******************************************/
-
-body {
-
+section{
+  flex: 1 200px;
 }
 
-
-/******************************************
-/* LAYOUT
-/*******************************************/
-header {
-
+.tarjeta{
+  height: 200px;
+  opacity: 0.5;
+  transition: opacity 500ms;
 }
-
-footer {
-
+.default{
+  background-color: rgb(216, 213, 213);
 }
-
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
+.red{
+  background-color: red;
+}
+.yellow{
+  background-color: yellow;
+}
+.blue{
+  background-color: blue;
+}
+.black{
+  background-color: black;
+}
+.green{
+  background-color: green;
+}
+.white{
+  background-color: white;
+}
+.disabled{
+  pointer-events: none;
+  opacity: 0.5;
+}
