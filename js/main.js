@@ -20,6 +20,19 @@ llenarTableroConTarjetasAleatoriamente(tarjetas);
 desbloquearInputUsuario();
 document.querySelector('button[type=button]').onclick = reiniciarEstado;
 
+
+function tarjetasAlAzar(){
+    let res = [new Tarjeta("red"),new Tarjeta("red"),
+                new Tarjeta("yellow"),new Tarjeta("yellow"),
+                new Tarjeta("blue"),new Tarjeta("blue"),
+                new Tarjeta("black"),new Tarjeta("black"),
+                new Tarjeta("green"),new Tarjeta("green"),
+                new Tarjeta("white"),new Tarjeta("white")
+            ];
+    let pasada01 = res.sort(() => Math.random() -0.5);
+    return pasada01.sort(() => Math.random() -0.5);
+}
+
 function llenarTableroConTarjetasAleatoriamente(valores){
     let element = document.createElement("section");
     let $tablero = document.querySelector('#tablero');
