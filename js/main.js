@@ -29,3 +29,23 @@ function llenarTableroConTarjetasAleatoriamente(valores){
         $tablero.appendChild(element);
     }
 }
+function actualizarNumeroIntentos(ronda){
+    document.querySelector('#ronda').textContent = ronda;
+}
+function reiniciarEstado(){
+    eliminarNodos();
+    ronda = 0;
+    actualizarNumeroIntentos(ronda);
+    tarjetasDeJuego = [];
+    tarjetas = tarjetasAlAzar();
+    comparador = [];
+    llenarTableroConTarjetasAleatoriamente(tarjetas);
+    desbloquearInputUsuario();
+
+}
+function eliminarNodos(){
+    let $tablero = document.querySelector('#tablero');
+    while($tablero.hasChildNodes()){
+        $tablero.removeChild($tablero.firstChild);
+    }
+}
