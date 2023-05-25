@@ -11,6 +11,14 @@ class Tarjeta{
     }
 }
 
+let ronda = 0;
+let tarjetasDeJuego = [];
+let tarjetas = tarjetasAlAzar();
+let comparador = [];
+
+llenarTableroConTarjetasAleatoriamente(tarjetas);
+desbloquearInputUsuario();
+document.querySelector('button[type=button]').onclick = reiniciarEstado;
 
 function llenarTableroConTarjetasAleatoriamente(valores){
     let element = document.createElement("section");
