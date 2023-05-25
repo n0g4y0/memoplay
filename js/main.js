@@ -12,3 +12,20 @@ class Tarjeta{
 }
 
 
+function llenarTableroConTarjetasAleatoriamente(valores){
+    let element = document.createElement("section");
+    let $tablero = document.querySelector('#tablero');
+
+    for(let i = 0; i < valores.length; i++){
+
+        element  = document.createElement("section");
+        element.classList.add("tarjeta");
+        element.classList.add("border");
+        element.classList.add("border-dark");
+        element.classList.add(`default`);
+
+        element.value = valores[i].color;
+        
+        $tablero.appendChild(element);
+    }
+}
