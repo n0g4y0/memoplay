@@ -29,6 +29,47 @@ function llenarTableroConTarjetasAleatoriamente(valores){
         $tablero.appendChild(element);
     }
 }
+function manejarInputUsuario(e){
+    const $tarjeta = e.target;
+    resaltar($tarjeta);
+    comparador.push($tarjeta);
+
+    if(comparador.length === 2){
+        verificarEstadoTarjetas(comparador);
+        ronda++;
+        actualizarNumeroIntentos(ronda);
+        comparador = [];
+    }
+
+}
+
+function verificarEstadoTarjetas(comparador){
+    
+    if(comparador[0].value === comparador[1].value){
+        comparador[0].classList = "";
+        comparador[0].classList.add("tarjeta");
+        comparador[0].classList.add("disabled");
+        comparador[1].classList = "";
+        comparador[1].classList.add("tarjeta");
+        comparador[1].classList.add("disabled");
+    }else{
+        comparador[0].classList = "tarjeta border border-dark default";
+        comparador[1].classList = "tarjeta border border-dark default";
+    
+    }
+}
+
+function resaltar($tarjeta){
+    $tarjeta.classList.remove('default');
+    $tarjeta.classList.add(`${$tarjeta.value}`);
+
+}
+
+function desbloquearInputUsuario() {
+    document.querySelectorAll('.tarjeta').forEach(function($tarjeta) {
+      $tarjeta.onclick = manejarInputUsuario;
+    });
+}
 function actualizarNumeroIntentos(ronda){
     document.querySelector('#ronda').textContent = ronda;
 }
